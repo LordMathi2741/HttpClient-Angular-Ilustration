@@ -1,0 +1,36 @@
+<p>
+  <mat-toolbar color="warn">
+    <span>First Review</span>
+  </mat-toolbar>
+</p>
+
+
+<div style="display:flex; justify-content:center; align-items: center; flex-wrap: wrap; padding: 20px;">
+   @for(item of countries; track item){
+     <mat-card style="width: 400px; margin: 20px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
+       <mat-card-content style="text-align: center;">
+         <h1> {{item.name.common}}</h1>
+         <p> Area: {{ item.area }} </p>
+         <div>
+           @for(spelling of item.altSpellings; track spelling){
+             <p> {{ spelling }} </p>
+           }
+         </div>
+         <p> Capital: {{ item.capital[0] }}</p>
+         <p> Region: {{ item.region }}</p>
+         <p> Subregion: {{ item.subregion }}</p>
+         <p> Population: {{ item.population }}</p>
+         <p> Area: {{ item.area }}</p>
+         <p> Flag: {{item.flag}}</p>
+       </mat-card-content>
+     </mat-card>
+   }
+
+</div>
+
+<div style="background-color: palevioletred; padding:2rem; text-align: center; color:white; margin-top:28rem;">
+  <span > &copy; 2024 All Rights Reserved </span>
+</div>
+
+
+
